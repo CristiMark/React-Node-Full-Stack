@@ -10,7 +10,7 @@ const LogInPage = () => {
     const navigate = useNavigate();
 
     const logIn= async () => {
-        try{
+        try{          
         await signInWithEmailAndPassword(getAuth(), email,password);
         navigate('/articles');
         }catch (e){
@@ -37,7 +37,8 @@ const LogInPage = () => {
             value={password}
             onChange={e=>setPassword(e.target.value)} />
         </label>
-        <button onClick={logIn}>Log In</button>
+        
+        <button onClick={logIn}>Create Account</button>
         <Link to="/createAccount">Don't have account. Create one here</Link>
     </div>
   )
